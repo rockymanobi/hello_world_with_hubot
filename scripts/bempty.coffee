@@ -1,8 +1,8 @@
 # Description:
-#   Interacts with the Google Maps API.
+#   Interacts with the ASL Bathroom's status.
 #
 # Commands:
-#   hubot map me <query> - Returns a map view of the area returned by `query`.
+#   hubot UNKO MORESOU - Returns whether ASL bathroom is vacant or occupied.
 
 module.exports = (robot) ->
 
