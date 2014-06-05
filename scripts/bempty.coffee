@@ -45,7 +45,6 @@ module.exports = (robot) ->
             foundVacant = true
 
     hoge = ->
-      msg.send "asl1あいてるかな"
       if foundVacant
         msg.send "トイレが空いたよ!!"
         clearAllTimeout()
@@ -53,7 +52,6 @@ module.exports = (robot) ->
       ask('asl1')
       asl1Timer = setTimeout(hoge , 5000)
     hoge2 = ->
-      msg.send "asl2あいてるかな"
       if foundVacant
         msg.send "トイレが空いたよ!!"
         clearAllTimeout()
