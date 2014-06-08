@@ -6,7 +6,7 @@
 
 module.exports = (robot) ->
 
-  robot.respond /UNKO MORESOU/i, (msg) ->
+  robot.respond /UNKO MORESOU|ウンコ漏れそう/i, (msg) ->
 
     sendStallsStatus = ( stall )->
       msg.send "#{stall.display_name} is #{stall.status}"
@@ -41,7 +41,7 @@ module.exports = (robot) ->
       msg.http("http://test-toilet.herokuapp.com/stalls/#{name}")
         .get() (err, res, body) ->
           stall = JSON.parse(body)
-          if stall.status isnt "vacant"
+          if stall.status isnt "occupied"
             foundVacant = true
 
     hoge = ->
